@@ -14,4 +14,22 @@ Expected Outcomes:
 
 // Place your plan and solution below!
 
-/*  */
+/* 
+1. Check HTML and identify relevant elements ✅
+2. Select canvas in DOM and declare as a variable ✅
+3. Select input in DOM and declare as a variable ✅
+4. Define a function that sets the background colour of canvas to the value of input 
+5. Add event listener to input - onclick, drag?
+6. Pass the function to the event listener
+*/
+
+const canvas = document.getElementById("canvas");
+
+const colourPicker = document.getElementById("colorPicker");
+
+function colourChange() {
+  const selectedColour = colourPicker.value ;
+  canvas.style.backgroundColor = selectedColour ;
+}
+
+colourPicker.addEventListener("input", colourChange);
