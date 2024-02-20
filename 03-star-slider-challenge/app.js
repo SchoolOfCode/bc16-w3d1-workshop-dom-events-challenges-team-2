@@ -13,3 +13,33 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+/* 1. Take a look at the live server ✅
+   2. Take a look at the HTML elements ✅
+   3. Make a variable starSlider ✅
+   4. make a variable for stars ✅
+   5. Make a function to change value of range of starSlider to (++) or (--) the ammount of stars dynamically (based on the value of the slider)
+   6. starslider value changes to 3 > stars ++ to 3*/
+
+  const starSlider = document.getElementById("starSlider");
+  const stars = document.getElementById("stars");
+  
+  function ratingChange() {
+    let sliderValue = parseInt(starSlider.value);
+    // Looks up and compares the value of slider at any given time
+
+    sliderValue = Math.min(Math.max(sliderValue, 1), 5);
+    // caps the slider value to be no more or less than 1 to 5.
+
+    stars.innerHTML = "";
+    // Clears the existing stars each time you move the slider up or down
+    
+   for (let i = 0; i < sliderValue; i++) {
+      const star = document.createElement("span");
+      star.textContent = "★";
+      star.className = "star-icon"
+      stars.appendChild(star);
+    }
+  };
+  // Add new stars based on slider value
+
+  starSlider.addEventListener("input", ratingChange);
