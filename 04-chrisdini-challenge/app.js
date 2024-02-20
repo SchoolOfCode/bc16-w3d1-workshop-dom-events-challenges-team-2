@@ -15,3 +15,18 @@ Hint: You can achieve this in multiple ways e.g. via the opacity or style proper
 */
 
 // Place your plan and solution below!
+
+const Chris = document.getElementById("chrisImage");
+
+function abracadabra() {
+  Chris.setAttribute("src", " ")
+}
+
+function hippittyhoppitty() {
+  Chris.setAttribute("src", "chris.png")
+}
+
+Chris.addEventListener("mouseover", abracadabra); {
+};
+Chris.addEventListener("mouseout", hippittyhoppitty); {
+};
